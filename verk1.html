@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Creating a website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Go to front page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Front page</a></li>
+							<li><a href="ferilskra.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+                                    <li><a href="https://www.facebook.com/profile.php?id=1325810599" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/hrannarth/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/hrannarth" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">February 23, 2021</span>
+									<h1>Press fit</h1>
+									<h3>second assignment of the semester.</h3>
+								</header>
+								<div class="image main">
+                                    
+                                    <img style= "border-radius: 10%" style="border-radius: 5%"src="images/press_fit_full_img.jpg" alt="" /></div>
+                                <p style="text-align:justify">
+                                Measuring the kerf was worked in a group. My groupmembers were Stefán Már Helgason, <a href="https://stefanmar96.github.io/">his website</a> and Magnús Snær Ríkarðsson, <a href="https://magnusrikardsson.github.io/vefsida/index.html">his website</a>.
+                                We went to fablab Reykjavík and in fusion 360 we drew a 100*10mm rectangle with cut-lines with 10mm intervals inside the rectangle. We sent that file to the laser cutter and ended up with the following. <br />
+                                <img src="images/kerfcut.jpg" style="border-radius: 5%" height="60%" width="60%" alt="" /><br />
+                                After that we took one square out of the rectangular space and measured the empty space, that space was measuerd to be 12,08mm. Next we measured the square that we removed, that square was measured to be 9,8mm. In total there were 11 lasercuts done on the rectangle so to measure the kerf we used the formula (12,08-9,8)/11 = <b>0,207</b> which is our kerf. I then went to my parameters and set the parameter "kerf" to 0,207.<br />
+                                <img src="images/measuring.jpg"  style="border-radius: 5%" height="60%" width="60%" alt="" /> <br />                                   <img style="border-radius: 5%" class="image right" src="images/fail_stand.png" alt="">The assignment was to design a parametric, scalable and press-fit model of a building block. It took some time to decide what to design and in the end after some time I decided to create a phone stand and one of the reasons I decided on this was because it didn’t need a lot of material so if I failed it would be ok. The material I used was plywood and its dimensions are 4 x 300 x 600 mm. I used Fusion 360 to design my building blocks, I tried first to do it myself without any help from the internet, but it wasn’t working. I had some design in mind and when I tried executing it I realised that something was wrong. <br />
+                                After reorganizing my plan, the next step was doing some research and watch some Youtube videos. <a href="https://www.youtube.com/watch?v=9U2JPfkQpsE&ab_channel=HobbyistMaker /">Fusion360: Automatically sized finger-joints</a>showed me how smart it was to use the parameters to decide the size of my building blocks. After creating the box that the video showed it was time to start drawing. <a href="https://www.youtube.com/watch?v=7riGolu7BpA&ab_channel=AutodeskFusion360">Designing a Lasercut Laptop Stand with Fusion 360</a> helped me vizualise my design and also showed me some nice functions that would be helpful in the design<br />
+                                <img style="border-radius: 5%" class="image" src="images/box.png" width="380" height="201" alt="">
+                                <img style="border-radius: 5%" class="image center" src="images/parameters.png" alt="">
+                                    <br />
+                                    <B>Disclaimer: For each individual part I created a new component.</B><br />
+                                <img style="border-radius: 5%" class="image center" src="images/component.png" alt="">
+                                    <br />
+                                The first step was creating the sides because they would be a good foundation for the building blocks. I started a new sketch on a plane and roughly made the shape, then I used the dimensions function to decide length and height and put the appropriate parameters (see picture). After the sketch was finished, I extruded the sketch 4mm and then I copied the new body and offset it 100mm so I wouldn’t need to make the same sketch twice. Now I have 2 bodies for the side and if I make one change to one of the sides it will also affect the other side which was very convenient when I used the fillet function to round the edges. 
+                                <br />
+                                <img style="border-radius: 5%" class="image center" src="images/sketch_side.png" alt="">
+                                  <img style="border-radius: 5%" class="image center" height= "209" width="319" src="images/extrude.png" alt="">                              
+                                    <br />
+                                    Next up was to create the top and I started the sketch on the inclined face of one of the side pieces. I drew a rectangle that I then fixed with the dimension function. Two construction lines were created so I could mirror 4 holes so that the top would press-fit into the sides. Now the sketch for the top is complete so now I need to extrude the sketch and then combine it so it will cut into the sides and make the necessary shape so that the building blocks would be press-fit.<br />
+                                    <img style="border-radius: 5%" class="image left" src="images/sketch_top.png" alt="">
+                                  <img style="border-radius: 5%" class="image right" height= "209" width="319" src="images/cut.png" alt="">    
+                                 <img style="border-radius: 5%" class="image center" src="images/extrude2.png" alt=""> 
+                                    <br />
+                                    Now that I have the sides and the top, all I need is the support panels on the bottom. I started at the back of the sides, offset a plane to start my sketch and did the same concept as the top, create a rectangle, put the dimensions on it, extrude it (so it cuts). Now I have one support block and the next step is to create a midplane of the side blocks and then mirror the support block using the midplane.
+                                    <br />
+                                    <img style="border-radius: 5%" class="image left" src="images/sketch_back.png" alt="">
+                                  <img style="border-radius: 5%" class="image right" height= "209" width="319" src="images/planes.png" alt="">    
+                                 <img style="border-radius: 5%" class="image center" src="images/full_model.png" alt=""> 
+                                    <br />
+                                    Now we have every component we need to prepare it in Inkscape and to prepare the components. I installed <a href="https://apps.autodesk.com/FUSION/en/Detail/Index?id=7634902334100976871&os=Win64&appLang=en">DXF for laser</a> and that made it easy to adjust the faces to the appropriate kerf and automatically created a dxf file of the component that I then dragged the dxf file into Inkscape. <a href="https://www.youtube.com/watch?v=zN0jkUGdObw&ab_channel=Dutch">DXF Segmented Line Fix in Inkscape 2</a> showed me the necessary step to prepare for the cut. <a href="https://www.instructables.com/Format-High-Quality-Images-in-GIMP-for-Laser-Cutti/">Format High-Quality Images in GIMP for Laser Cutting (Georgia Tech Invention Studio)
+                                    </a>  showed me step by step how to prepare images to be laser cutted onto my pieces and was really helpful so that went really well. The laser cut took place in Fablab and the appropriate manuals were there to make everything ready and finish the cut. 
+                                    <br /> 
+                                    <img style="border-radius: 5%" class="image center" src="images/dxfus.png" alt=""> 
+                                    <img style="border-radius: 5%" class="image center" src="images/inksc.PNG" alt=""> 
+                                    <br />
+                                    <img style="border-radius: 5%" class="image center" height="309" width="534" src="images/fall.PNG" alt="">
+                                    <br />
+                                    As you can see there is a missing piece, for the support, on the inkscape picture, I took notice of this when I already cut my pieces but it was easy to fix. I copied the piece that I needed moved it to a location that had free space and cut again. <br />
+                                    I am happy with the result of this assignment and in the picture below you can see the product being used.
+                                     <br />
+                                    <img style="border-radius: 5%" class="image center" height="309" width="534" src="images/lokloklok.jpg" alt="">
+                                </ p>
+										
+
+										
+                               
+							</section>
+					</div>
+                <span> span</span>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<style> p {text-align: center;}
+                        </style>
+                        
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Heiðargerði 108<br />
+								108 Reykjavík</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p>+354 857-5695</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p>hrt10@hi.is</p>							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+                                    <li><a href="https://www.facebook.com/profile.php?id=1325810599" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/hrannarth/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/hrannarth" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hrannar Þórarinsson</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
